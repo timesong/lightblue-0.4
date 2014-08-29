@@ -63,4 +63,6 @@ if MAC:
     if "install" in sys.argv:
         import os
         os.chdir("src/mac/LightAquaBlue")
-        os.system("xcodebuild install -arch '$(NATIVE_ARCH_ACTUAL)' -target LightAquaBlue -configuration Release DSTROOT=/ INSTALL_PATH=/Library/Frameworks DEPLOYMENT_LOCATION=YES")
+        #os.system("xcodebuild install -arch '$(NATIVE_ARCH_ACTUAL)' -target LightAquaBlue -configuration Release DSTROOT=/ INSTALL_PATH=/Library/Frameworks DEPLOYMENT_LOCATION=YES")
+        #http://stackoverflow.com/questions/22279913/how-to-install-either-pybluez-or-lightblue-on-osx-10-9-mavericks
+        os.system("xcodebuild install -arch 'i386' -target LightAquaBlue -configuration Release DSTROOT=/ INSTALL_PATH=/Library/Frameworks DEPLOYMENT_LOCATION=YES")
